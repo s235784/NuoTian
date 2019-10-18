@@ -1,0 +1,120 @@
+
+<!--
+     _   _             _______  _
+    | \ | |           |__   __|(_)
+    |  \| | _   _   ___  | |    _   __ _  _ __
+    | . ` || | | | / _ \ | |   | | / _` || '_ \
+    | |\  || |_| || (_) || |   | || (_| || | | |
+    |_| \_| \__,_| \___/ |_|   |_| \__,_||_| |_|
+
+    Author: NuoTian (https://github.com/s235784)
+
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>诺天 NuoTian - 个人主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="NuoTian,诺天,HomePage,个人主页,Furry,兽圈"/>
+    <meta name="Description" content="诺天的个人主页"/>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cafe.furrys.cn/favicon_48.ico" type="image/x-icon" rel="icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://res.furrys.cn/materialize/0.97.8/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script type="text/javascript" src="https://res.furrys.cn/jquery/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://res.furrys.cn/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://res.furrys.cn/jquery/backstretch/2.1.18/filter/backstretch.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149898603-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-149898603-3');
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="content-div">
+
+            <div class="center">
+                <img src="https://cafe.furrys.cn/nuotian/avatar.jpg" width="144px" class="circle responsive-img" alt="avatar">
+            </div>
+            <div>
+                <h3 class="center-align" style="margin-top: 0; font-size: 28px">
+                    <span class="white-text">诺天 NuoTian</span>
+                </h3>
+                <h5 class="center-align" style="font-size: 18px">
+                    <span class="white-text">对不起，您的请求发送失败请不要重试！QVQ</span>
+                </h5>
+            </div>
+
+            <br>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col s12 m4 center">
+                    <a class="waves-effect waves-light btn works-btn" href="https://tohboe.furrycafe.com/">TohBoe</a>
+                </div>
+                <div class="col s12 m4 center">
+                    <a class="waves-effect waves-light btn works-btn" href="https://www.furrycafe.com/">FurryCafe</a>
+                </div>
+                <div class="col s12 m4 center">
+                    <a class="waves-effect waves-light btn works-btn" href="https://www.mium.studio/ExaTool/">ExaTool</a>
+                </div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="center" style="margin-top: 10px; font-size: 18px;">
+                <a class="white-text" href="https://space.bilibili.com/11517485">BiliBili</a>
+                <a class="white-text" href="mailto:2357846676@qq.com">Email</a>
+                <a class="white-text" href="https://github.com/s235784">GitHub</a>
+                <a class="white-text" href="http://sighttp.qq.com/authd?IDKEY=dc5227f0717d58348c62a3958d17907b897f311d78013513">QQ</a>
+                <a class="white-text" href="https://twitter.com/s2357846">Twitter</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="white-text center-align background-div" style="margin-bottom: 0;">Background By 猫舌かぐ</div>
+        <div class="white-text center-align copyright-div">Copyright © 2019 NuoTian</div>
+    </footer>
+</body>
+
+<script>
+    const images = {
+        url: [
+            "https://cafe.furrys.cn/nuotian/background-猫舌かぐ.png",
+            "https://cafe.furrys.cn/nuotian/background-うまに.jpg",
+            "https://cafe.furrys.cn/nuotian/background-外.jpg",
+            "https://cafe.furrys.cn/nuotian/background-うまに2.png"
+        ],
+        painter: [
+            "猫舌かぐ",
+            "うまに",
+            "外",
+            "うまに"
+        ],
+        link: [
+            "https://twitter.com/nekojitaaaaaaaa",
+            "https://twitter.com/umani",
+            "https://twitter.com/totatetta_",
+            "https://twitter.com/umani"
+        ]
+    };
+
+    $(window).on("backstretch.before", function (e, instance, index) {
+        const background_info = "Background By <a class='white-text' target='_blank' href='"+ images.link[index] +"'>"+ images.painter[index] +"</a>";
+        $(".background-div").html(background_info);
+    });
+    $.backstretch(images.url, {blurRadius: 3, duration:8000, fade:1000,});
+    const div_backstretch = $('.backstretch');
+    div_backstretch.css("transform", "scale(1.01)");
+    div_backstretch.css("pointer-events", "none");
+
+    const year = new Date().getFullYear();
+    $(".copyright-div").html("Copyright © " + year + " NuoTian");
+</script>
+
+</html>
