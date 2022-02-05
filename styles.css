@@ -1,14 +1,14 @@
-html,body,main {
+html,body,main, .block {
     height: 100%;
     width: 100%;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
+body {
+    background: #f4f5f7 !important;
+}
+
+section {
+    height: 100vh;
 }
 
 .content-div {
@@ -19,6 +19,11 @@ footer {
     -webkit-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     -ms-transform:translate(-50%,-50%);
+}
+
+.footer-div {
+    position: absolute;
+    top:95%;
 }
 
 .works-btn {
@@ -32,4 +37,44 @@ footer {
 
 .divider {
     background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.float-opener-div {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+}
+
+.float-opener-div-child {
+    -webkit-animation: float-opener .5s ease-in-out .5s infinite alternate;
+    animation: float-opener .5s ease-in-out .5s infinite alternate;
+}
+
+@-webkit-keyframes float-opener {
+    from{transform:translate(0,0)}
+    to{transform:translate(0,25px)}
+}
+
+@keyframes float-opener {
+    from{transform:translate(0,0)}
+    to{transform:translate(0,25px)}
+}
+
+.float-opener-div-child-second {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.float-opener-div-child-second > i {
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
 }
